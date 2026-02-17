@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css.css" />
+    <link rel="stylesheet" href="theme.css" />
+
+    <script type="module" src="index.js"></script>
+    <script type="module" src="theme.js"></script>
+    <title>My ToDo App</title>
+  </head>
+
+  <body data-theme="universe">
+    <header>
+      <select id="lan-select">
+        <option value="">Change the theme</option>
+        <option value="light">Light</option>
+        <option value="dark">Dark</option>
+        <option value="universe">The universe</option>
+      </select>
+    </header>
+
+    <div class="container">
+      <h1>My ToDo App</h1>
+      <p class="description">Add your tasks and keep track of what you have completed.</p>
+      <div class="input-section">
+        <div class="divSection">
+          <input type="text" id="categoryInput" placeholder="Divide it into Categories" />
+          <button id="addCategoryBtn">+</button>
+        </div>
+
+        <select id="categorySelect">
+          <option value="">Select Category</option>
+        </select>
+
+        <div class="divSection">
+          <input type="text" id="taskInput" placeholder="What needs to be done?" />
+
+          <input type="number" id="amountInput" placeholder="Number" />
+
+          <button id="addBtn">+</button>
+        </div>
+      </div>
+
+      <div class="todo-section">
+        <h2>Categories</h2>
+        <div id="categoryList"></div>
+      </div>
+
+      <div class="done-section">
+        <h2>Done</h2>
+        <ul id="doneList"></ul>
+      </div>
+      <!-- <button id="deleteBtn"><img class="img_btn" src="img/bin.png" alt="delete" /></button> -->
+    </div>
+  </body>
+</html>

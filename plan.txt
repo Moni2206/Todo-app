@@ -1,0 +1,27 @@
+Appen skal kunne:
+1. Oprette en opgave
+2. Gemme mere end bare en tekst (fx antal)
+3. Markere som færdig → flyttes til “Færdig”-liste
+4. Fortryde → flyttes tilbage
+5. Slette opgave
+6. Gemme alt i localStorage
+
+
+hvad jeg skal have 
+1. To lister
+- ToDo
+- Færdige
+
+2. Inputfelt + knap
+- Beskrivelse
+- Antal
+
+3. JavaScript-logik
+- Array til todos
+- Array til done
+- Funktioner til:
+- addTask()
+- deleteTask()
+- toggleDone()
+- saveToLocalStorage()
+- loadFromLocalStorage()

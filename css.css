@@ -1,0 +1,89 @@
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  padding-top: 50px;
+}
+
+.container {
+  background: white;
+  width: 450px;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Buttons */
+button {
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.deleteBtn {
+  background: transparent;
+  border: none;
+}
+
+.deleteBtn img {
+  width: 18px;
+}
+
+/* Category */
+.category-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+}
+
+[data-category-tasks] {
+  list-style: none;
+  padding-left: 0;
+}
+
+/* Task layout */
+.task-item-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 0;
+}
+
+.task-text {
+  flex: 1;
+  word-break: break-word;
+}
+
+.task-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+/* Done section */
+.done-section {
+  display: none;
+  margin-top: 20px;
+}
+
+#doneList {
+  list-style: none;
+  padding: 0;
+}
+
+.deleteBtn img {
+  width: 18px;
+  height: auto;
+}
+
+.todo-section,
+#doneList {
+  border-bottom: 1px solid #050505;
+}
+
+#doneList,
+.todo-section [data-category] {
+  display: flex;
+  justify-content: space-between;
+  align-items: first baseline;
+  padding: 11px;
+}
