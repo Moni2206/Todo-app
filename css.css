@@ -19,13 +19,19 @@ button {
   border-radius: 5px;
 }
 
-.deleteBtn {
+.deleteBtn,
+.doneBtn {
   background: transparent;
   border: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px;
 }
 
 .deleteBtn img {
   width: 18px;
+  height: auto;
 }
 
 /* Category */
@@ -44,19 +50,21 @@ button {
 /* Task layout */
 .task-item-wrapper {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  gap: 12px;
   padding: 6px 0;
 }
 
 .task-text {
-  flex: 1;
+  flex: 1 1 auto;
   word-break: break-word;
 }
 
 .task-buttons {
-  display: flex;
+  display: inline-flex;
   gap: 8px;
+  flex: 0 0 auto;
+  align-items: center;
 }
 
 /* Done section */
@@ -75,15 +83,28 @@ button {
   height: auto;
 }
 
-.todo-section,
-#doneList {
-  border-bottom: 1px solid #050505;
+/* Each category gets its own box */
+.todo-section [data-category] {
+  display: block;
+  padding: 10px;
+  border: 1px solid #e6e6e6;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  background: #fafafa;
 }
 
-#doneList,
-.todo-section [data-category] {
-  display: flex;
-  justify-content: space-between;
-  align-items: first baseline;
-  padding: 11px;
+.category-header h3 {
+  display: inline-block;
+  margin: 0;
+}
+
+.category-count {
+  font-size: 0.9rem;
+  color: #666;
+  margin-left: 8px;
+}
+
+.done-section {
+  display: block; /* altid synlig */
+  margin-top: 20px;
 }
