@@ -134,9 +134,17 @@ function createCategory(categoryValue) {
 }
 
 // === FEEDBACK ===
+
 function showFeedback(msg) {
+  const feedback = document.getElementById("feedback");
+
+  if (!feedback) return; // sikkerhed
+
   feedback.textContent = msg;
-  setTimeout(() => (feedback.textContent = ""), 2000);
+
+  setTimeout(() => {
+    feedback.textContent = "";
+  }, 2000);
 }
 
 // === TILFØJ KATEGORI ===
@@ -157,7 +165,7 @@ addTaskBtn.addEventListener("click", () => {
   const category = categorySelect.value.trim();
 
   if (!text || !category) {
-    showFeedback("Udfyld felt og vælg kategori!");
+    showFeedback("Fill in the field and select a category!");
     return;
   }
 
