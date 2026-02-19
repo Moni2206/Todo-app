@@ -1,55 +1,89 @@
 body {
   font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
   display: flex;
   justify-content: center;
   padding-top: 50px;
 }
+
 .container {
-  background-color: white;
+  background: #f2f1f1;
   width: 450px;
   padding: 30px;
   border-radius: 15px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
-  transition: 0.3s ease;
 }
-.addBtn,
-.addCategoryBtn {
-  background-color: #007bff;
-  color: white;
-  border: none;
-  padding: 8px 12px;
+
+/* Buttons */
+button {
   cursor: pointer;
   border-radius: 5px;
 }
-button:hover {
-  background-color: #0056b3;
-}
-.done {
-  text-decoration: line-through;
-  color: rgb(0, 0, 0);
-}
-.img_btn {
-  display: flex;
+
+.deleteBtn,
+.doneBtn {
+  background: transparent;
+  border: none;
+  display: inline-flex;
+  align-items: center;
   justify-content: center;
+  padding: 4px;
 }
 
-#amountInput {
-  width: 70px;
+.deleteBtn img {
+  width: 18px;
+  height: auto;
 }
-#todoList {
-  list-style-type: none;
-  padding-right: 2rem;
-}
-#doneList {
+
+/* Category */
+.category-header {
   display: flex;
   justify-content: space-between;
-  align-items: first baseline;
-  padding: 11px;
-  border-bottom: 1px solid #050505;
+  align-items: center;
+  margin-top: 15px;
 }
 
-/* category containers should not have a bottom border */
+[data-category-tasks] {
+  list-style: none;
+  padding-left: 0;
+}
+
+/* Task layout */
+.task-item-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 6px 0;
+}
+
+.task-text {
+  flex: 1 1 auto;
+  word-break: break-word;
+}
+
+.task-buttons {
+  display: inline-flex;
+  gap: 8px;
+  flex: 0 0 auto;
+  align-items: center;
+}
+
+/* Done section */
+.done-section {
+  display: none;
+  margin-top: 20px;
+}
+
+#doneList {
+  list-style: none;
+  padding: 0;
+}
+
+.deleteBtn img {
+  width: 18px;
+  height: auto;
+}
+
+/* Each category gets its own box */
 .todo-section [data-category] {
   display: block;
   padding: 10px;
@@ -63,55 +97,14 @@ button:hover {
   display: inline-block;
   margin: 0;
 }
+
 .category-count {
   font-size: 0.9rem;
   color: #666;
   margin-left: 8px;
 }
 
-/* Categories and grouped tasks styling */
-.todo-section #categoryList {
-  margin-bottom: 12px;
-}
-/* .todo-section [data-category] {
-  margin-bottom: 12px;
-} */
-.todo-section [data-category] h3 {
-  margin: 0 0 6px 0;
-  font-size: 16px;
-  font-weight: 600;
-}
-/* .todo-section [data-category] ul {
-  list-style-type: disc;
-  padding-left: 1.2rem;
-  margin: 0 0 8px 0;
-} */
-/* .todo-section [data-category] li {
-  margin-bottom: 6px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 8px;
-} */
-.deleteBtn {
-  background: transparent;
-  border: none;
-  cursor: pointer;
-  padding: 2px;
-}
-.deleteBtn img {
-  width: 18px;
-  height: auto;
-}
-.divSection {
-  padding-top: 1rem;
-  padding-bottom: 12px;
-
-  display: flex;
-}
-#categorySelect,
-#categoryInput {
-  /* background-color: rgb(206, 232, 241); */
-  border: 1px solid #000;
-  display: flex;
+.done-section {
+  display: block; /* altid synlig */
+  margin-top: 20px;
 }

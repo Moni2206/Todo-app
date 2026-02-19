@@ -6,7 +6,7 @@ function SetTheme(theme) {
   localStorage.setItem("theme", theme);
 }
 
-console.log("hvilken theme er det? ", localStorage.getItem("theme"));
+// console.log("hvilken theme er det? ", localStorage.getItem("theme"));
 
 // Initialize theme from localStorage (run on load)
 (function initTheme() {

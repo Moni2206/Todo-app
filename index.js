@@ -1,4 +1,4 @@
-// === HENT ELEMENTER ===
+//  HENT ELEMENTER
 const addTaskBtn = document.querySelector("#addBtn");
 const addCategoryBtn = document.querySelector("#addCategoryBtn");
 const taskInput = document.querySelector("#taskInput");
@@ -9,10 +9,10 @@ const categoryList = document.querySelector("#categoryList");
 const doneList = document.querySelector("#doneList");
 const feedback = document.getElementById("feedback");
 
-// === GLOBAL ARRAY ===
+//  GLOBAL ARRAY
 let tasks = [];
 
-// === GEM / LOAD TASKS ===
+//  GEM / LOAD TASKS
 function saveTasks() {
   localStorage.setItem("tasks", JSON.stringify(tasks));
 }
@@ -105,8 +105,12 @@ function createCategory(categoryValue) {
     // fjern kategori
     categoryGroup.remove();
     categorySelect.querySelector(`option[value="${categoryValue}"]`)?.remove();
-    // fjern tasks med denne kategori
-    tasks = tasks.filter((t) => t.category !== categoryValue);
+    // fjern kun tasks der er i kategorien (ikke done tasks)
+    tasks = tasks.filter((t) => {
+      const sameCategory = (t.category || "").trim() === (categoryValue || "").trim();
+      // Behold tasks der er done ELLER ikke fra denne kategori
+      return !(sameCategory && !t.done);
+    });
     saveTasks();
     saveCategories();
     renderTasks();
