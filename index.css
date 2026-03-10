@@ -7,18 +7,43 @@ body {
 
 .container {
   background: #f2f1f1;
-  width: 450px;
-  padding: 30px;
+  width: 484px;
+  padding: 59px;
   border-radius: 15px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+#categorySelect,
+#categoryInput,
+#taskInput,
+#amountInput {
+  padding: 8px;
+
+  border-radius: 2rem;
 }
 
 /* Buttons */
 button {
   cursor: pointer;
-  border-radius: 5px;
+  border-radius: 28px;
+  padding: 8px;
+  color: #fdfdfd;
+  background-color: black;
+  text-decoration: none;
+  border: 5px solid #9384c8;
 }
 
+.divSection,
+#categorySelect {
+  margin-bottom: 11px;
+}
+
+option,
+input,
+#categorySelect {
+  text-decoration: none;
+  background-color: rgb(255, 255, 255);
+  text-decoration: none;
+  border: 5px solid #9384c8;
+}
 .deleteBtn,
 .doneBtn {
   background: transparent;
